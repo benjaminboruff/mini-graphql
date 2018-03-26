@@ -1,9 +1,9 @@
-const { microGraphiql, microGraphql } = require('apollo-server-micro')
-const { send } = require('micro')
-const { get, post, router } = require('microrouter')
-const { makeExecutableSchema } = require('graphql-tools')
-const typeDefs = require('./types/books')
-const resolvers = require('./resolvers/books')
+import { microGraphiql, microGraphql } from 'apollo-server-micro'
+import { send } from 'micro'
+import { get, post, router } from 'microrouter'
+import { makeExecutableSchema } from 'graphql-tools'
+import typeDefs from './types/books'
+import resolvers from './resolvers/books'
 
 // Put together a schema
 const schema = makeExecutableSchema({
@@ -14,7 +14,9 @@ const schema = makeExecutableSchema({
 const graphqlHandler = microGraphql({ schema })
 const graphiqlHandler = microGraphiql({ endpointURL: '/graphql' })
 
-module.exports = router(
+console.log('hello')
+
+export default router(
   get('/graphql', graphqlHandler),
   post('/graphql', graphqlHandler),
   get('/graphiql', graphiqlHandler),
