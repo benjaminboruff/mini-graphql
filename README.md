@@ -4,6 +4,7 @@
 ##### Install
 
 > git clone https://github.com/benjaminboruff/mini-graphql.git
+
 > cd mini-graphql && yarn
 
 ##### Usage
