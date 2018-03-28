@@ -9,14 +9,15 @@
 
 ##### Usage
 
-* Development
+* Development - watches and builds ES* in one terminal, and runs `micro-dev` in another.
+
     In one terminal:
     >yarn dev:babel
 
     In another terminal:
     >yarn dev:micro
 
-* Build and start server
+* Build and start server - compiles using babel, and starts the *production* `micro` server.
     >yarn start
 
 * Make a production build in `dist/`
