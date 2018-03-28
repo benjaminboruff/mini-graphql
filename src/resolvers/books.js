@@ -8,11 +8,11 @@ const books = [
     title: 'Jurassic Park',
     author: 'Michael Crichton'
   }
-]
+];
 
 // The resolvers
 const resolvers = {
   Query: { books: () => books }
-}
+};
 
-export default resolvers
+export default resolvers;
