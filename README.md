@@ -1,5 +1,5 @@
-# A small graphQL server
-#### based on `micro` and `apollo-server-micro`
+# A small GraphQL server
+#### using [micro](https://github.com/zeit/micro), [microrouter](https://www.npmjs.com/package/microrouter), and [apollo-server-micro](https://www.npmjs.com/package/apollo-server-micro)
 
 ##### Install
 
