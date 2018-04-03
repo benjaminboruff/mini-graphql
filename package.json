@@ -14,20 +14,36 @@
     "start": "babel src -d dist && micro dist/index.js",
     "dev:babel": "babel src -d dist --watch",
     "dev:micro": "micro-dev dist/index.js",
-    "build" : "babel src -d dist"
+    "build": "babel src -d dist",
+    "test": "ava"
   },
   "devDependencies": {
+    "ava": "^1.0.0-beta.3",
     "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.2",
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.19.1",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.9.0",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "micro-dev": "^2.2.2"
+    "eslint-config-google": "^0.9.1",
+    "micro-dev": "^2.2.2",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2",
+    "test-listen": "^1.1.0"
   },
-  "babel":{
-    "presets": ["env"]
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "ava": {
+    "files": [
+      "test/*.test.js"
+    ],
+    "sources": [
+      "dist/lib/*.js"
+    ],
+    "require": [
+      "babel-register",
+      "babel-polyfill"
+    ]
   }
 }
