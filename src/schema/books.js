@@ -1,4 +1,4 @@
-import { makeExecutableSchema } from 'graphql-tools';
+import {makeExecutableSchema} from 'graphql-tools';
 import resolvers from '../resolvers/books';
 
 // The GraphQL schema in string form
@@ -10,7 +10,7 @@ const typeDefs = `
 // Put together a schema
 const schema = makeExecutableSchema({
   typeDefs,
-  resolvers
+  resolvers,
 });
 
 export default schema;

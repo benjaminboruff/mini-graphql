@@ -1,9 +1,4 @@
 {
-    "extends": "standard",
-    "env": {
-        "node": true
-    },
-    "rules": {
-        "semi": [2, "always"]
-    }
+    "extends": "google",
+    "parser": "babel-eslint"
 }
