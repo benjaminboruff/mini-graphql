@@ -11,7 +11,7 @@
     "microrouter": "^3.1.1"
   },
   "scripts": {
-    "start": "babel src -d dist && micro dist/index.js",
+    "start": "yarn build && micro dist/index.js",
     "dev:babel": "babel src -d dist --watch",
     "dev:micro": "micro-dev dist/index.js",
     "build": "babel src -d dist",
