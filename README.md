@@ -24,4 +24,4 @@
     >yarn build
 
 * A simple client data request using `curl`
-    > curl -XPOST -H "Content-Type:application/json"  -d '{"query": "{books { title author}}"}'  http://localhost:3000/graphql
+    > curl -XPOST -H "Content-Type:application/json"  -d '{"query": "{books { title author { firstName lastName }}}"}'  http://localhost:3000/graphql
