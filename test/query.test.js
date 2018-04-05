@@ -74,14 +74,14 @@ test('titles of all books', async (t) => {
     const options = {
         method: 'POST',
         uri: url + '/graphql',
-        body: {'query': '{ allBooks { title }}'},
+        body: {'query': '{ books { title }}'},
         json: true,
         headers: {'Content-Type': 'application/json'},
     };
     const body = await request(options);
 
-    t.is(body.data.allBooks[0].title, 'Harry Potter and the Sorcerer\'s stone');
-    t.is(body.data.allBooks[1].title, 'Jurassic Park');
+    t.is(body.data.books[0].title, 'Harry Potter and the Sorcerer\'s stone');
+    t.is(body.data.books[1].title, 'Jurassic Park');
     service.close();
 });
 
@@ -91,16 +91,16 @@ test('names of all Authors', async (t) => {
     const options = {
         method: 'POST',
         uri: url + '/graphql',
-        body: {'query': '{ allAuthors { firstName lastName }}'},
+        body: {'query': '{ authors { firstName lastName }}'},
         json: true,
         headers: {'Content-Type': 'application/json'},
     };
     const body = await request(options);
 
-    t.is(body.data.allAuthors[0].firstName, 'J.K.');
-    t.is(body.data.allAuthors[0].lastName, 'Rowling');
-    t.is(body.data.allAuthors[1].firstName, 'Michael');
-    t.is(body.data.allAuthors[1].lastName, 'Crichton');
+    t.is(body.data.authors[0].firstName, 'J.K.');
+    t.is(body.data.authors[0].lastName, 'Rowling');
+    t.is(body.data.authors[1].firstName, 'Michael');
+    t.is(body.data.authors[1].lastName, 'Crichton');
     service.close();
 });
 
