@@ -138,14 +138,14 @@ test('"Harry Potter and the Sorcerer\'s stone" is authored by J.K. Rowling',
             method: 'POST',
             uri: url + '/graphql',
             body: {
-                    'query': `{ 
-                                book(title: "Harry Potter and the Sorcerer\'s stone") {
-                                    author {
-                                    firstName
-                                    lastName
-                                    }
-                                }
-                              }`,
+            'query': `{ 
+                        book(title: "Harry Potter and the Sorcerer\'s stone") {
+                            author {
+                            firstName
+                            lastName
+                            }
+                        }
+                        }`,
             },
             json: true,
             headers: {'Content-Type': 'application/json'},
