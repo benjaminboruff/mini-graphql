@@ -15,9 +15,12 @@
     "dev:babel": "babel src -d dist --watch",
     "dev:micro": "micro-dev dist/index.js",
     "build": "babel src -d dist",
+    "test:watch": "ava --watch --verbose",
     "test": "ava"
   },
   "devDependencies": {
+    "@babel/polyfill": "^7.0.0-beta.44",
+    "@babel/register": "^7.0.0-beta.44",
     "ava": "^1.0.0-beta.3",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.2",
@@ -39,11 +42,12 @@
       "test/*.test.js"
     ],
     "sources": [
-      "dist/lib/*.js"
+      "dist/index.js",
+      "dist/**/*.js"
     ],
     "require": [
-      "babel-register",
-      "babel-polyfill"
+      "@babel/register",
+      "@babel/polyfill"
     ]
   }
 }
